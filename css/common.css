@@ -73,3 +73,12 @@ padding-left: 16px;
 
 /* Task 2 */
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.list-item {
+  margin-bottom: 48px; 
+}
