@@ -1,4 +1,4 @@
-const list = document.querySelector('.gallery');
+const galleryList = document.querySelector('.gallery');
 
 const images = [
   {
@@ -27,14 +27,10 @@ const images = [
   },
 ];
 
+let htmlString = '';
+
 images.forEach(image => {
-  const li = document.createElement('li');
-  li.classList.add('list-item');
-  const img = document.createElement('img');
-  img.src = image.url;
-  img.alt = image.alt;
-  img.width = 360;
-  img.height = 300;
-  li.appendChild(img);
-  list.appendChild(li);
+  htmlString += `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}" width="360" height="300"></li>`;
 });
+
+galleryList.innerHTML = htmlString;
